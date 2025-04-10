@@ -13,5 +13,20 @@ import ComposableArchitecture
 
 @Reducer
 struct CounterFeature {
-    //
+    /**
+     To conform to Reducer you will start with a domain modeling exercise. You will create a State type that holds the state your feature needs to do its job, typically a struct. Then you will create an Action type that holds all the actions the user can perform in the feature, typically an enum.
+     */
+    /**
+     Further, if your feature is to be observed by SwiftUI, which is usually the case, you must annotate its state with the ObservableState() macro. It is the Composable Architecture’s version of @Observable, but tuned to value types.
+     */
+    // 위에서 말했듯. SwiftUI에서 @Observable매크로가 있듯이, TCA에서는 @ObservableState가 있다.
+    // 이름에서부터 알 수 있듯이 상태에 매크로를 달아준다. 그런데,'tuned to value types'
+    @ObservableState
+    struct State {
+        
+    }
+    
+    enum Action {
+        
+    }
 }
